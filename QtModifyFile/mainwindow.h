@@ -2,10 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMenu>
-#include <QMenuBar>
-#include <QAction>
-#include <QToolBar>
+#include <QPushButton>
+#include <QTextEdit>
 namespace Ui {
 class MainWindow;
 }
@@ -20,11 +18,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QMenu *fileMenu,*editMenu,*helpMenu;
-    QToolBar *fileToolBar,*editToolBar;
-    QAction *newAct,*cutAct,*copyAct,*pasteAct,*aboutQtAct;
+    QPushButton *browseBt;
+    QPushButton *saveBt;
+    QTextEdit *edit;
+    QTextEdit *content;
 private slots:
-    void newFile();
+    void saveFile();
+    void browseFile();
 };
 
 #endif // MAINWINDOW_H

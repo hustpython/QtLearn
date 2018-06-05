@@ -2,10 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMenu>
-#include <QMenuBar>
-#include <QAction>
-#include <QToolBar>
+#include <QLabel>
+#include <QLineEdit>
+#include <QCalendarWidget>
 namespace Ui {
 class MainWindow;
 }
@@ -20,11 +19,12 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QMenu *fileMenu,*editMenu,*helpMenu;
-    QToolBar *fileToolBar,*editToolBar;
-    QAction *newAct,*cutAct,*copyAct,*pasteAct,*aboutQtAct;
+    QLabel *label;
+    QLineEdit *lineEdit;
+    QCalendarWidget *calendarWidget;
 private slots:
-    void newFile();
+    void showTime();
+    void setData();
 };
 
 #endif // MAINWINDOW_H

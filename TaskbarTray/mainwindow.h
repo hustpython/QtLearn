@@ -2,10 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMenu>
-#include <QMenuBar>
+#include <QSystemTrayIcon>
 #include <QAction>
-#include <QToolBar>
+#include <QMenu>
 namespace Ui {
 class MainWindow;
 }
@@ -20,11 +19,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QMenu *fileMenu,*editMenu,*helpMenu;
-    QToolBar *fileToolBar,*editToolBar;
-    QAction *newAct,*cutAct,*copyAct,*pasteAct,*aboutQtAct;
+    QSystemTrayIcon *myTrayIcon;
+    QMenu *myMenu;
+    QAction *restoreWinAction;
+    QAction *quitAction;
+    void createMenu();
 private slots:
-    void newFile();
+    void showjj();
 };
 
 #endif // MAINWINDOW_H
