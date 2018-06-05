@@ -1,0 +1,1 @@
+# This is the code from "c++ qt5 范例开发大全"
