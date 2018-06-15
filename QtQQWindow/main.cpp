@@ -1,11 +1,10 @@
-#include "basewindow.h"
-#include <QApplication>
+#include "loginwindow.h"
+#include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    basewindow w;
+    LoginWindow w;
     w.show();
-
     return a.exec();
 }

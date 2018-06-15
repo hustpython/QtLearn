@@ -1,8 +1,7 @@
 #ifndef BASEWINDOW_H
 #define BASEWINDOW_H
-
 #include <QDialog>
-
+#include "mytitlebar.h"
 class BaseWindow : public QDialog
 {
     Q_OBJECT
@@ -19,7 +18,7 @@ private slots:
     void onButtonRestoreClicked();
     void onButtonMaxClicked();
     void onButtonCloseClicked();
-private:
+protected:
     MyTitleBar *m_titleBar;
 
 };
